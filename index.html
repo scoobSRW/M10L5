@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript and the Document Object Model DOM</title>
+    <script src="script.js" defer></script>
+        <style>
+        #box {
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin: 20px;
+        }
+
+        #box:hover {
+            background-color: lightgreen;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #product-container {
+            display: flex;
+            gap: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box" onclick="changeColor()">Click me to change color</div>
+
+    <h1>Products:</h1>
+    <div id="product-container"></div>
+
+    <button onclick="addProduct()">Add Product</button>
+
+<form id="myForm" onsubmit="handleSubmit(event)">
+    <label for="username">Name:</label>
+    <input type="text" id="username" name="username" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
